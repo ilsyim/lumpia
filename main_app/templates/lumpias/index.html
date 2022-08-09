@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/lumpias/lumpia-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>Lumpia Plate</h1>
+  <img src="" alt="" />
+
+</section>
+
+<section class="card-container">
+  {% for lumpia in lumpias %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img 
+            src="{% static 'images/lumpia.svg' %}" 
+            alt="lumpia with a bowl of dipping sauce"
+            class="lumpia"
+          >
+        </div>
+        <h2 class="card-title">{{ lumpia.protein }}</h2>
+        {% if lumpia.protein == 'tofu' %}
+          <p>A veggie lumpia!</p>
+        {% else %}
+          <p>There's meat in here!</p>
+        {% endif %}
+        <p><small>{{ lumpia.review }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
