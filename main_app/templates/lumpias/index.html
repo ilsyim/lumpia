@@ -20,7 +20,7 @@
 <section class="card-container">
   {% for lumpia in lumpias %}
     <div class="card">
-      <a href="/lumpias/{{ lumpia.id }}">
+      <a href="{% url 'lumpias_detail' lumpia.id %}">
         <div class="card-content">
           <div class="card-img-container">
             <img 
