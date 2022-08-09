@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Lumpia
   
 lumpias = [
@@ -21,3 +22,7 @@ def lumpias_index(request):
 def lumpias_detail(request, lumpia_id):
   lumpia = Lumpia.objects.get(id=lumpia_id)
   return render(request, 'lumpias/detail.html', { 'lumpia': lumpia })
+
+class LumpiaCreate(CreateView):
+  model = Lumpia
+  fields = '__all__'

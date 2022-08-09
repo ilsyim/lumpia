@@ -9,7 +9,7 @@
   <link
     rel="shortcut icon"
     type="image/png"
-    href=""
+    href="{% static 'images/flag.png' %}"
   >
   <title>Lumpia Maker</title>
 
@@ -28,6 +28,7 @@
     <nav>
       <ul>
         <li><a href="{% url 'lumpias_index' %}">All Lumpia</a></li>
+        <li><a href="{% url 'lumpias_create' %}">Make Lumpia</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
       </ul>
     </nav>
