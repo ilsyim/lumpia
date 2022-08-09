@@ -20,22 +20,23 @@
 <section class="card-container">
   {% for lumpia in lumpias %}
     <div class="card">
-      <div class="card-content">
-        <div class="card-img-container">
-          <img 
-            src="{% static 'images/lumpia.svg' %}" 
-            alt="lumpia with a bowl of dipping sauce"
-            class="lumpia"
-          >
+      <a href="/lumpias/{{ lumpia.id }}">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img 
+              src="{% static 'images/lumpia.svg' %}" 
+              alt="lumpia with a bowl of dipping sauce"
+              class="lumpia"
+            >
+          </div>
+          <h2 class="card-title">{{ lumpia.get_protein_display }}</h2>
+          {% if lumpia.protein == 'V' %}
+            <p>A veggie lumpia!</p>
+          {% else %}
+            <p>There's meat in here!</p>
+          {% endif %}
         </div>
-        <h2 class="card-title">{{ lumpia.protein }}</h2>
-        {% if lumpia.protein == 'tofu' %}
-          <p>A veggie lumpia!</p>
-        {% else %}
-          <p>There's meat in here!</p>
-        {% endif %}
-        <p><small>{{ lumpia.review }}</small></p>
-      </div>
+      </a>
     </div>
   {% endfor %}
 </section>

@@ -1,11 +1,5 @@
 from django.shortcuts import render
-
-
-class Lumpia:
-  def __init__(self, protein, fillings, review):
-    self.protein = protein
-    self.filings = fillings 
-    self.review = review
+from .models import Lumpia
   
 lumpias = [
   Lumpia('fish', 'noodles and veggies', 'So fresh and so clean'),
@@ -21,4 +15,9 @@ def about(request):
   return render(request, 'about.html')
 
 def lumpias_index(request):
+  lumpias = Lumpia.objects.all()
   return render(request, 'lumpias/index.html', {'lumpias': lumpias})
+
+def lumpias_detail(request, lumpia_id):
+  lumpia = Lumpia.objects.get(id=lumpia_id)
+  return render(request, 'lumpias/detail.html', { 'lumpia': lumpia })

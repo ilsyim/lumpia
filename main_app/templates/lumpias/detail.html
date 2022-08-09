@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/lumpias/lumpia-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="lumpia-container">
+  <div class="lumpia-img">
+    <img 
+      src="{% static 'images/lumpia.svg' %}" 
+      alt="lumpias with a bowl for dipping sauce"
+      class="lumpia"
+    >
+  </div>
+  <div class="lumpia-details">
+    <h1>{{ lumpia.get_protein_display }}</h1>
+    {% if lumpia.protein == 'V' %}
+      <h2>A vegetarian lumpia</h2>
+    {% else %}
+      <h2>A lumpia with meat</h2>
+    {% endif %}
+    <p>Review: {{ lumpia.review }}</p>
+    <p>Ingredients: {{ lumpia.fillings }}</p>
+  </div>
+</section>
+
+{% endblock %}

@@ -10,6 +10,12 @@
   flex-wrap: wrap;
 }
 
+.card-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   width: 275px;
   margin: 10px;
