@@ -42,7 +42,7 @@
   height: 100%;
   display: inline-block;
   text-decoration: none;
-  color: var(--text-color);
+  color: black;
 }
 
 .card h2 {

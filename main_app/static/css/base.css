@@ -22,15 +22,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+  font-family: 'Dosis', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     'Helvetica Neue', sans-serif;
   min-height: 100vh;
-  --nav-bg: rgba(204, 12, 36, 0.7);
+  --nav-bg: rgba(4, 52, 172, 0.9);
   --nav-bg-ff: yellow solid 2px;
-  --borders: yellow solid 2px;
-  --text-color: rgb(17, 20, 17);
-  --link-hover-color: yellow;
+  --borders: #fad72d solid 2px;
+  --text-color: #fad72d;
+  --link-hover-color: white;
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
@@ -44,17 +44,23 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 6px;
-  background: rgba(250, 215, 45, 0.6);
+  background-color: white;
 }
 
 header {
   width: 100%;
   background: var(--nav-bg-ff);
   border-bottom: var(--borders);
+  background: rgba(4, 52, 172, 0.9);
 }
 
 nav {
   margin: 10px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
 }
 
 ul {
@@ -101,17 +107,18 @@ nav li {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: none;
 }
 
 .maker {
   font-size: 24px;
   text-decoration: none;
   margin-bottom: 8px;
-  color: white;
+  color: #fad72d;
 }
 
 .maker:hover {
-  color: blue;
+  color: white;
 }
 
 .page-header {
@@ -173,7 +180,11 @@ nav li {
 }
 
 .page-content {
-  font-size: var(--font-reg);
+  font-size: 24px;
+}
+
+.about {
+  font-size: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -278,7 +289,7 @@ nav li {
 
     nav,
     .header-logo-container {
-      background: rgba(255, 0, 0, 0.7);
+      background: rgba(4, 52, 172, 0.9);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }

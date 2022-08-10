@@ -23,7 +23,7 @@ main > section {
   max-width: 375px;
 }
 
-.lumpia-container {
+.flag-container {
   width: 80%;
 }
 
@@ -73,7 +73,7 @@ main > section {
   }
 
   .login {
-    border: var(--borders);
+    border: #0434ac solid 2px;;
     padding: 20px;
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);

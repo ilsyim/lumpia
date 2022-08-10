@@ -7,9 +7,11 @@
 }
 
 .lumpia {
-width: 250px;
-height: 250px;
-background-color: blue;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border: rgb(4, 52, 172) solid 2px;
+  border-radius: var(--card-border-radius);
 }
 
 .lumpia-img {
@@ -97,14 +99,10 @@ background-color: blue;
   margin: 5px 0;
 }
 
-.desserts {
-  background-color: blue;
-}
-
 .desserts-container > section {
   width: 80%;
   min-width: 360px;
-  border: var(--borders);
+  border: rgb(4, 52, 172) solid 2px;
   border-radius: var(--card-border-radius);
   padding: 10px;
   box-shadow: var(--card-box-shadow);
@@ -152,6 +150,11 @@ background-color: blue;
 .dessert-container a {
   text-decoration: none;
   color: #111;
+}
+
+.dessert-container a:hover {
+  text-decoration: none;
+  color: #0434ac;
 }
 
 .dessert-container .btn {

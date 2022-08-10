@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: blue; 
+  background: white; 
 }
 
 .card {
@@ -22,7 +22,7 @@
   margin: 10px;
   border: rgb(4, 52, 172) solid 2px;
   box-shadow: var(--card-box-shadow);
-
+  /* background-color: rgba(204, 12, 36, .7) */
 }
 
 .card-content {
@@ -37,7 +37,7 @@
 
 .card > a {
   text-decoration: none;
-  color: var(--text-color);
+  color: black;
 }
 
 .card h2 {

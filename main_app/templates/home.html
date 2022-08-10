@@ -8,17 +8,17 @@
 {% block content %}
 
 <section class="logo-container">
-  <div class="lumpia-container">
-    <img src="{% static 'images/flag.png' %}" alt="Philippine Flag" />
+  <div class="flag-container">
+    <img
+      src="{% static 'images/Lumpia.png' %}"
+      alt="Philippine Flag"
+      class="flag"
+    />
   </div>
-  <img 
-    src="" 
-    alt=""
-  />
 </section>
 
 {% if not user.is_authenticated %}
-  <section>
+  <section class="login-container">
     <form action="{% url 'home' %}" method="post" class="login">
       <h1>Login</h1>
       {% csrf_token %}
