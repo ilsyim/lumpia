@@ -21,7 +21,7 @@ def lumpias_detail(request, lumpia_id):
 
 class LumpiaCreate(CreateView):
   model = Lumpia
-  fields = '__all__'
+  fields = ['protein', 'fillings', 'review']
 
 class LumpiaUpdate(UpdateView):
   model = Lumpia
