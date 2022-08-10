@@ -29,7 +29,7 @@
       <h2>A lumpia with meat!</h2>
     {% endif %}
     <p>Review: {{ lumpia.review }}</p>
-    <p>Ingredients: {{ lumpia.fillings }}</p>
+    <p>Fillings: {{ lumpia.fillings }}</p>
     <div class="lumpia-actions">
       <a href="{% url 'lumpias_update' lumpia.id %}" class="btn warn">Edit</a>
       <a href="{% url 'lumpias_delete' lumpia.id %}" class="btn danger">Delete</a>
