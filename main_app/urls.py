@@ -12,4 +12,6 @@ urlpatterns = [
   path('desserts/create/', views.DessertCreate.as_view(), name='desserts_create'),
   path('desserts/<int:pk>/', views.DessertDetail.as_view(), name='desserts_detail'),
   path('desserts/', views.DessertList.as_view(), name='desserts_index'),
+    path('desserts/<int:pk>/update/', views.DessertUpdate.as_view(), name='desserts_update'),
+  path('desserts/<int:pk>/delete/', views.DessertDelete.as_view(), name='desserts_delete'),
 ]

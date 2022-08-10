@@ -29,3 +29,10 @@ class Dessert(models.Model):
   color = models.CharField(max_length=30)
   description = models.TextField(max_length=150)
   ingredients = models.TextField(max_length=300)
+
+  def __str__(self):
+    return self.name
+  
+  def get_absolute_url(self):
+      return reverse('desserts_detail', kwargs={'pk': self.id})
+  

@@ -40,3 +40,11 @@ class DessertList(ListView):
 
 class DessertDetail(DetailView):
   model = Dessert
+
+class DessertUpdate(UpdateView):
+  model = Dessert
+  fields = '__all__'
+
+class DessertDelete(DeleteView):
+  model = Dessert
+  success_url = '/desserts/'

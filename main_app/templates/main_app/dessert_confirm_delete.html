@@ -9,15 +9,15 @@
 
 <div class="form-div">
   <div class="page-header">
-    <h1>Delete Lumpia?</h1>
+    <h1>Delete Dessert?</h1>
     <img src="{% static 'images/trash.png' %}" alt="Trash can"/>
   </div>
-  <h2>Are you sure you want to delete your {{ lumpia.get_protein_display }} lumpia?</h2>
+  <h2>Are you sure you want to delete {{ dessert.name }}?</h2>
 
   <form action="" method="POST" class="form">
     {% csrf_token %}
     <a 
-      href="{% url 'lumpias_detail' lumpia.id %}" 
+      href="{% url 'desserts_detail' dessert.id %}" 
       class="btn secondary"
     >
       Cancel
