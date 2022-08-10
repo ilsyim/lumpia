@@ -1,12 +1,14 @@
+from re import template
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from .models import Lumpia, Dessert
-  
+from django.contrib.auth.views import LoginView
+
 # Create your views here.
 
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 def about(request):
   return render(request, 'about.html')

@@ -27,11 +27,18 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{% url 'lumpias_index' %}">All Lumpias</a></li>
-        <li><a href="{% url 'lumpias_create' %}">Make a Lumpia</a></li>
-        <li><a href="{% url 'desserts_index' %}">All Desserts</a></li>
-        <li><a href="{% url 'desserts_create' %}">Make a Dessert</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'lumpias_index' %}">All Lumpias</a></li>
+          <li><a href="{% url 'lumpias_create' %}">Make a Lumpia</a></li>
+          <li><a href="{% url 'desserts_index' %}">All Desserts</a></li>
+          <li><a href="{% url 'desserts_create' %}">Make a Dessert</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
+          {% else %}
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'home' %}">Login</a></li>
+          {% endif %}
+
       </ul>
     </nav>
   </header>

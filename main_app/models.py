@@ -1,6 +1,7 @@
-from distutils.text_file import TextFile
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 PROTEINS = (
@@ -34,6 +35,7 @@ class Lumpia(models.Model):
   fillings = models.TextField(max_length=250)
   review = models.TextField(max_length=250)
   desserts = models.ManyToManyField(Dessert)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def get_absolute_url(self):
     return reverse('lumpias_detail', kwargs={'lumpia_id': self.id})
