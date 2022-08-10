@@ -4,6 +4,13 @@
   width: 100%;
 }
 
+.form-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 table {
   padding: 0 40px;
   width: 100%;
