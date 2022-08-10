@@ -37,6 +37,9 @@ class Lumpia(models.Model):
   desserts = models.ManyToManyField(Dessert)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+  def __str__(self):
+    return self.get_protein_display()
+
   def get_absolute_url(self):
     return reverse('lumpias_detail', kwargs={'lumpia_id': self.id})
   
