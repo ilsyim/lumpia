@@ -1,12 +1,7 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Lumpia
   
-lumpias = [
-  Lumpia('fish', 'noodles and veggies', 'So fresh and so clean'),
-  Lumpia('pork', 'glass noodles and veggies', 'Crunchy, best when fried'),
-  Lumpia('tofu', 'onions, carrots, soy sauce', 'No meat!')
-]
 # Create your views here.
 
 def home(request):
@@ -26,3 +21,11 @@ def lumpias_detail(request, lumpia_id):
 class LumpiaCreate(CreateView):
   model = Lumpia
   fields = '__all__'
+
+class LumpiaUpdate(UpdateView):
+  model = Lumpia
+  fields = "__all__"
+
+class LumpiaDelete(DeleteView):
+  model = Lumpia
+  success_url = '/lumpias/'

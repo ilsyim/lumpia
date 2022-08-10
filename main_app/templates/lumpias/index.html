@@ -32,6 +32,8 @@
           <h2 class="card-title">{{ lumpia.get_protein_display }}</h2>
           {% if lumpia.protein == 'V' %}
             <p>A veggie lumpia!</p>
+          {% elif lumpia.protein == 'T' %}
+            <p>Sweet lumpia!</p>
           {% else %}
             <p>There's meat in here!</p>
           {% endif %}

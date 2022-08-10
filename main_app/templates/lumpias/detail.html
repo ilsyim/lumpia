@@ -22,12 +22,18 @@
   <div class="lumpia-details">
     <h1>{{ lumpia.get_protein_display }}</h1>
     {% if lumpia.protein == 'V' %}
-      <h2>A vegetarian lumpia</h2>
+      <h2>A vegetarian lumpia!</h2>
+    {% elif lumpia.protein == 'T' %}
+      <h2>A dessert lumpia!</h2>
     {% else %}
-      <h2>A lumpia with meat</h2>
+      <h2>A lumpia with meat!</h2>
     {% endif %}
     <p>Review: {{ lumpia.review }}</p>
     <p>Ingredients: {{ lumpia.fillings }}</p>
+    <div class="lumpia-actions">
+      <a href="{% url 'lumpias_update' lumpia.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'lumpias_delete' lumpia.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 

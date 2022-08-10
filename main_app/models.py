@@ -1,5 +1,5 @@
-from turtle import filling
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 PROTEINS = (
@@ -19,4 +19,8 @@ class Lumpia(models.Model):
   )
   fillings = models.TextField(max_length=250)
   review = models.TextField(max_length=250)
+
+  def get_absolute_url(self):
+    return reverse('lumpias_detail', kwargs={'lumpia_id': self.id})
+  
 

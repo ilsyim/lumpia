@@ -8,7 +8,11 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Make Lumpia</h1>
+  {% if lumpia %}
+    <h1>Edit Lumpia</h1>
+  {% else %}
+    <h1>Make Lumpia</h1>
+  {% endif %}
   <img
     src="{% static 'images/cook.png' %}"
     alt="Lumpias with a bowl for sauce"
