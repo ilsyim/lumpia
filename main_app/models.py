@@ -1,3 +1,4 @@
+from distutils.text_file import TextFile
 from django.db import models
 from django.urls import reverse
 
@@ -23,4 +24,8 @@ class Lumpia(models.Model):
   def get_absolute_url(self):
     return reverse('lumpias_detail', kwargs={'lumpia_id': self.id})
   
-
+class Dessert(models.Model):
+  name = models.CharField(max_length=100)
+  color = models.CharField(max_length=30)
+  description = models.TextField(max_length=150)
+  ingredients = models.TextField(max_length=300)

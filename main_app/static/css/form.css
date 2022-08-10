@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+} /* come back to this if I don't like the delete form layout */
 
 table {
   padding: 0 40px;
