@@ -9,6 +9,7 @@
 .lumpia {
 width: 250px;
 height: 250px;
+background-color: blue;
 }
 
 .lumpia-img {
@@ -57,6 +58,7 @@ height: 250px;
   height: 25px;
   width: 25px;
   margin-right: 10px;
+  border: 1px solid black;
 }
 
 .no-desserts,
@@ -93,6 +95,10 @@ height: 250px;
 .lumpia-details p {
   font-size: var(--font-reg);
   margin: 5px 0;
+}
+
+.desserts {
+  background-color: blue;
 }
 
 .desserts-container > section {

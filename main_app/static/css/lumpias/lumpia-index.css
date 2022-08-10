@@ -14,14 +14,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: blue; 
 }
 
 .card {
   width: 275px;
   margin: 10px;
-  border: var(--borders);
+  border: rgb(4, 52, 172) solid 2px;
   box-shadow: var(--card-box-shadow);
-  /* background: blue; change this later if I need more styling*/
+
 }
 
 .card-content {

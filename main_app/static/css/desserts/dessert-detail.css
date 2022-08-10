@@ -28,6 +28,7 @@ main {
   border: solid 2px;
   box-shadow: var(--card-box-shadow);
   position: relative;
+  
 }
 
 .card-bg{

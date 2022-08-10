@@ -16,8 +16,8 @@ PROTEINS = (
 class Dessert(models.Model):
   name = models.CharField(max_length=100)
   color = models.CharField(max_length=30)
-  description = models.TextField(max_length=150)
   ingredients = models.TextField(max_length=300)
+  description = models.TextField(max_length=150)
 
   def __str__(self):
     return self.name

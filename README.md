@@ -16,9 +16,9 @@ Django, Python3, CSS, Docker, HTML
 
 
 ## Credits:  
-- [Cooking, trash can, dessert PNG](https://www.pngrepo.com/)
+- [Cooking, trash can, dessert, plate PNG](https://www.pngrepo.com/)
 - [Lumpia SVG](https://thenounproject.com/)  
-- [Favicon](https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg)
+- [Favicon, Flag](https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg)
 
 ## Next Steps:
 - [ ] Changing the styling.
