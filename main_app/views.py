@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Lumpia
+from django.views.generic import ListView, DetailView
+from .models import Lumpia, Dessert
   
 # Create your views here.
 
@@ -24,8 +25,18 @@ class LumpiaCreate(CreateView):
 
 class LumpiaUpdate(UpdateView):
   model = Lumpia
-  fields = "__all__"
+  fields = '__all__'
 
 class LumpiaDelete(DeleteView):
   model = Lumpia
   success_url = '/lumpias/'
+
+class DessertCreate(CreateView):
+  model = Dessert
+  fields = '__all__'
+
+class DessertList(ListView):
+  model = Dessert
+
+class DessertDetail(DetailView):
+  model = Dessert

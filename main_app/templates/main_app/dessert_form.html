@@ -6,19 +6,15 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="page-header">
-  {% if lumpia %}
-    <h1>Edit Lumpia</h1>
+  {% if dessert %}
+    <h1>Edit {{dessert.name}}</h1>
   {% else %}
-    <h1>Make Lumpia</h1>
+    <h1>Make a Dessert</h1>
   {% endif %}
-  <img
-    src="{% static 'images/cook.png' %}"
-    alt="A pot cooking over fire"
-  />
+  <img src="{% static 'images/cook.png' %}" alt="A pot cooking over fire"/>
 </div>
-<form action="" method="post" class="form-container">
+<form action="" method="post" class="form-container" autocomplete="off">
   {% csrf_token %}
   <table>
     {{ form.as_table }}

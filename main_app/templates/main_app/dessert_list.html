@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/desserts/dessert-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>All Desserts</h1>
+  <img src="{% static 'images/dessert.png' %}" alt="Ice cream in a cup with a spoon" />
+</section>
+
+<section class="card-container">
+  {% for dessert in dessert_list %}
+  <div class="card" style="border-color: {{ dessert.color }}">
+    <div class="card-bg" style="background-color: {{ dessert.color }}"></div>
+    <a href="{% url 'desserts_detail' dessert.id %}">
+      <div class="card-content">
+        <h2>{{ dessert.name }}</h2>
+        <p>A {{ dessert.color }} dessert</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
