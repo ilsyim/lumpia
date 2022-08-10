@@ -37,4 +37,53 @@
   </div>
 </section>
 
+<div class="desserts-container">
+  <section class="desserts">
+    <div class="subsection-title">
+      <h2>Dessert Menu</h2>
+      <img src="{% static 'images/dessert.png' %}" alt="Ice cream in a cup with a spoon" />
+    </div>
+    <h3>Your Favorite Desserts</h3>
+    <div class="subsection-content">
+      {% if lumpia.desserts.count %}
+        {% for dessert in lumpia.desserts.all %}
+          <div class="dessert-container">
+            <div 
+              class="color-block"
+              style="background-color: {{ dessert.color }}"
+            ></div>
+            <a href="{% url 'desserts_detail' dessert.id %}">
+              <p>A yummy {{ dessert.name }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="no-desserts"> You haven't added any desserts!</p>
+      {% endif %}
+    </div>
+    <h3>Dessert Menu</h3>
+    <div class="subsection-content">
+      {% if desserts.count %}
+        {% for dessert in desserts.all %}
+          <div class="dessert-container">
+            <div
+              class="color-block"
+              style="background-color: {{ dessert.color }}"
+            ></div>
+            <a href="{% url 'desserts_detail' dessert.id %}">
+              <p>A {{ dessert.color }} {{ dessert.name }}</p>
+            </a>
+            <form action="{% url 'assoc_dessert' lumpia.id dessert.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn submit">Add Dessert</button>
+            </form>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="all-desserts">You like all these desserts!
+        </p>
+      {% endif %}
+    </div>
+  </section>
+</div>
 {% endblock %}

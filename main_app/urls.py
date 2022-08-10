@@ -14,4 +14,5 @@ urlpatterns = [
   path('desserts/', views.DessertList.as_view(), name='desserts_index'),
     path('desserts/<int:pk>/update/', views.DessertUpdate.as_view(), name='desserts_update'),
   path('desserts/<int:pk>/delete/', views.DessertDelete.as_view(), name='desserts_delete'),
+  path('lumpias/<int:lumpia_id>/assoc_dessert/<int:dessert_id>/', views.assoc_dessert, name='assoc_dessert'),
 ]

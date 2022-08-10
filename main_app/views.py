@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from .models import Lumpia, Dessert
@@ -17,7 +17,8 @@ def lumpias_index(request):
 
 def lumpias_detail(request, lumpia_id):
   lumpia = Lumpia.objects.get(id=lumpia_id)
-  return render(request, 'lumpias/detail.html', { 'lumpia': lumpia })
+  desserts_not_added = Dessert.objects.exclude(id__in = lumpia.desserts.all().values_list('id'))
+  return render(request, 'lumpias/detail.html', { 'lumpia': lumpia, 'desserts': desserts_not_added })
 
 class LumpiaCreate(CreateView):
   model = Lumpia
@@ -48,3 +49,7 @@ class DessertUpdate(UpdateView):
 class DessertDelete(DeleteView):
   model = Dessert
   success_url = '/desserts/'
+
+def assoc_dessert(request, lumpia_id, dessert_id):
+  Lumpia.objects.get(id=lumpia_id).desserts.add(dessert_id)
+  return redirect('lumpias_detail', lumpia_id=lumpia_id)
