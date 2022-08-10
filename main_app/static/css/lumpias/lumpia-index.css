@@ -22,7 +22,6 @@
   margin: 10px;
   border: rgb(4, 52, 172) solid 2px;
   box-shadow: var(--card-box-shadow);
-  /* background-color: rgba(204, 12, 36, .7) */
 }
 
 .card-content {
@@ -42,10 +41,10 @@
 
 .card h2 {
   margin: 10px 0;
-  font-size: var(--font-xl);
+  font-size: 30px;
 }
 
 .card p {
   margin: 5px 0;
-  font-size: var(--font-reg);
+  font-size: 22px;
 }
