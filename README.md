@@ -13,14 +13,16 @@ You can pick the protein for your lumpia, and pair it with any Filipino desserts
 ![Log In](main_app/static/images/login.png)
 ![Logged In](main_app/static/images/loggedin.png)
 ## Technologies Used:
-Django, Python3, CSS, Docker, HTML
+Django, Python3, PSQL, Docker, HTML, CSS
 
 
 ## Credits:  
 - [Cooking, trash can, dessert, plate PNG](https://www.pngrepo.com/)
 - [Lumpia SVG](https://thenounproject.com/)  
 - [Favicon, Flag](https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg)
+- [Logo](https://www.canva.com/)
 
 ## Next Steps:
-- [ ] Changing the styling.
-- [ ] Customizing the landing page / adding an image that I made.
+- [ ] Update the styling and logo.
+- [ ] Add an upload image feature.
+- [ ] Remove a dessert after adding it.
