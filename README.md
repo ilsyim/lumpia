@@ -10,7 +10,8 @@ You can pick the protein for your lumpia, and pair it with any Filipino desserts
 
 
 ## Screenshots:
-![Landing]()
+![Log In]('/main_app/static/images/login.png')
+![Logged In]('/main_app/static/images/loggedin.png')
 ## Technologies Used:
 Django, Python3, CSS, Docker, HTML
 
