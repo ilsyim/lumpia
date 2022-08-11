@@ -5,13 +5,13 @@ I created Lumpia Maker because I wanted to make an app that included food. I ini
 You can pick the protein for your lumpia, and pair it with any Filipino desserts you like. If you don't know any Filipino desserts, look some up and add the ones you want to try! 
 
 ## Getting Started:
-- [Deployed App]()
+- [Deployed App](https://lumpia-maker.herokuapp.com/)
 - [Trello](https://trello.com/b/GzA6S0IC/lumpia-maker)
 
 
 ## Screenshots:
-![Log In]('main_app/static/images/login.png')
-![Logged In]('main_app/static/images/loggedin.png')
+![Log In](main_app/static/images/login.png)
+![Logged In](main_app/static/images/loggedin.png)
 ## Technologies Used:
 Django, Python3, CSS, Docker, HTML
 
