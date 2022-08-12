@@ -36,7 +36,7 @@ class LumpiaCreate(LoginRequiredMixin, CreateView):
 
 class LumpiaUpdate(LoginRequiredMixin, UpdateView):
   model = Lumpia
-  fields = '__all__'
+  fields = ['protein', 'fillings', 'review']
 
 class LumpiaDelete(LoginRequiredMixin, DeleteView):
   model = Lumpia
